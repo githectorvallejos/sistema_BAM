@@ -1,0 +1,10 @@
+# Environments
+.env
+.sistema_BAM-env
+.venv
+env/
+sistema_BAM-env/
+venv/
+ENV/
+env.bak/
+venv.bak/
