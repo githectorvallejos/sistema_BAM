@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'sistema_BAM.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'registro_bams_usuarios',
+        'NAME': 'bams_storage',
         'USER':'postgres',
         'PASSWORD':'q1w2e3r4',
         'HOST':'localhost',

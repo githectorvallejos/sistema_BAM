@@ -1,6 +1,8 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
+from .models import bam_usuario
 
 # Creacion de vistas
 
 def home(request):
-    return render(request, "home.html")
+    bam = bam_usuario.objects.all()
+    return render(request, "home.html", {"bams": bam})

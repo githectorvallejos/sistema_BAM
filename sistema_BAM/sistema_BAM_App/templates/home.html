@@ -1,13 +1,45 @@
+{% extends "./base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hola ya estoy renderizando</h1>
-</body>
-</html>
+{% block title %} Home {% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class= "col-sm-12 col-md-6 col-lg-4 col-xl-4"></div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Marca-Modelo</th>
+                            <th>Proveedor</th>
+                            <th>Linea</th>
+                            <th>IMEI</th>
+                            <th>S/N</th>
+                            <th>SIM</th>
+                            <th>Apellido y Nombre</th>
+                            <th>DNI</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for c in bams %}
+                        <tr>
+                            <td>{{c.id}}</td>
+                            <td>{{c.marca_modelo}}</td>
+                            <td>{{c.Proveedor}}</td>
+                            <td>{{c.linea}}</td>
+                            <td>{{c.imei}}</td>
+                            <td>{{c.sn}}</td>
+                            <td>{{c.sim}}</td>
+                            <td>{{c.apellido_nombre}}</td>
+                            <td>{{c.dni}}</td>
+                            <td>{{c.fecha}}</td>
+                        </tr>    
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+
+    </div>
+{% endblock %}
